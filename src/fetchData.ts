@@ -7,3 +7,13 @@
 
 // 請在下方寫下你的程式碼
 
+export async function fetchData(url: string): Promise<any> {
+  return new Promise(async (resolve, reject) => {
+    try {
+      const res: any = await fetch(url)
+      resolve(res.json())
+    } catch (error) {
+      reject(error)
+    }
+  })
+}

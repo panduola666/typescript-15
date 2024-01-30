@@ -9,6 +9,11 @@
  */
 export function formatDate(date: Date): string {
     // 請在此處寫下你的程式碼
+    const timer: Date = new Date(date)
+    const year: number = timer.getFullYear()
+    const month: number = timer.getMonth() + 1
+    const day: number = timer.getDate()
+    return `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`
 }
 
 /**
@@ -22,4 +27,5 @@ export function formatDate(date: Date): string {
  */
 export function roundNumber(num: number): number {
     // 請在此處寫下你的程式碼
+    return Math.ceil(num)
 }
